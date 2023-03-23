@@ -1,0 +1,18 @@
+<div>
+    {{#if mensaje.length}}
+        <table>
+            <tr style="border: 1px solid black">
+                <th style="border: 1px solid black">e-mail</th>
+                <th style="border: 1px solid black">hora</th>
+                <th style="border: 1px solid black">mensaje</th>
+            </tr>
+            {{#each mensaje}}
+                <tr style="border: 1px solid black">
+                    <td><b style="color:blue">{{this.email}}</b></td>
+                    <td><p style="color:brown">{{this.hora}}</p></td>
+                    <td><i style="color:green">{{this.mensaje}}</i></td>
+                </tr>
+            {{/each}}
+        </table>
+    {{/if}}
+</div>

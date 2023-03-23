@@ -1,0 +1,38 @@
+<div>
+    <h1>Bienvenido {{user.nombre}} </h1>
+    <div>
+        {{#if user.nombre}}
+            <button><a href="/logout">logout</a></button>
+        {{/if}}
+    </div>
+    <h2>CHAT SOCKET</h2>
+    <div>
+        <h3>Ingrese datos del producto</h3>
+        <form id="newProduct" action="" method="post">
+            Title: <input id="title" type="text" name="title" required>
+            Price: <input id="price" type="number" name="price" required>
+            Thumbnail : <input id="thumbnail" type="text" name="thumbnail" required>
+            <button>Enviar</button>
+        </form>
+    </div>
+    <div id="container-products">
+        
+    </div>
+    <div>
+        <h3>CHAT</h3>
+        <form id="newMensaje" action="" method="post">
+            email: <input id="correo" type="email" name="email" required>
+            mensaje: <input id="mensaje" type="text" name="mensaje" required>
+            <button>Enviar</button>
+        </form>
+    </div>
+    <div id="container-chat">
+
+    </div>
+
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
